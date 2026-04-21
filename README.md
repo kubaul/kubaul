@@ -26,11 +26,13 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Warsaw,_Poland-0d1117?style=flat&logo=openstreetmap&logoColor=c9d1d9" alt="Warsaw, Poland" />
+</p>
+
+<p align="center">
   <a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
   &nbsp;
   <a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
-  &nbsp;
-  <img src="https://img.shields.io/badge/Warsaw,_Poland-0d1117?style=flat&logo=openstreetmap&logoColor=c9d1d9" alt="Warsaw, Poland" />
 </p>
 
 <br>
@@ -155,8 +157,6 @@ Rust · TUI with ratatui.
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/top-langs.svg" height="170" alt="top languages" />
-  &nbsp;
   <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/activity.svg" height="170" alt="activity" />
 </p>
 
