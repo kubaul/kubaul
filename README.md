@@ -73,7 +73,7 @@
   <img src="https://img.shields.io/badge/GitHub_Actions-0d1117?style=flat&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
   <img src="https://img.shields.io/badge/Linux-0d1117?style=flat&logo=linux&logoColor=FCC624" alt="Linux" />
   <img src="https://img.shields.io/badge/Neovim-0d1117?style=flat&logo=neovim&logoColor=57A143" alt="Neovim" />
-  <img src="https://img.shields.io/badge/Claude-0d1117?style=flat&logo=anthropic&logoColor=D97757" alt="Claude" />
+  <img src="https://img.shields.io/badge/Claude-0d1117?style=flat&logo=claude&logoColor=D97757" alt="Claude" />
 </p>
 
 <br>
