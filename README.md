@@ -14,19 +14,18 @@
 
 <br>
 
-<div align="center">
+<h3 align="center">About</h3>
 
-### Jakub Uchman-Lach
+<p align="center">
+  <b>Jakub Uchman-Lach</b><br>
+  <sub>software engineer · founder at <b>brickCode</b></sub>
+</p>
 
-<sub>software engineer · founder at <b>brickCode</b></sub>
-
-<br>
-
-<a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
-&nbsp;
-<a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
-
-</div>
+<p align="center">
+  <a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
+  &nbsp;
+  <a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
+</p>
 
 <br>
 
