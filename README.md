@@ -14,17 +14,19 @@
 
 <br>
 
-<h3 align="center">Jakub Uchman-Lach</h3>
+<div align="center">
 
-<p align="center">
-  <code>brickCode</code>
-</p>
+### Jakub Uchman-Lach
 
-<p align="center">
-  <a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
-  &nbsp;
-  <a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
-</p>
+<sub>software engineer · founder at <b>brickCode</b></sub>
+
+<br>
+
+<a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
+&nbsp;
+<a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
+
+</div>
 
 <br>
 
@@ -38,8 +40,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-0d1117?style=flat&logo=typescript&logoColor=3178C6" alt="TypeScript" />
   <img src="https://img.shields.io/badge/React-0d1117?style=flat&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Svelte-0d1117?style=flat&logo=svelte&logoColor=FF3E00" alt="Svelte" />
   <img src="https://img.shields.io/badge/Tailwind-0d1117?style=flat&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind" />
-  <img src="https://img.shields.io/badge/Vite-0d1117?style=flat&logo=vite&logoColor=646CFF" alt="Vite" />
   <img src="https://img.shields.io/badge/Swift-0d1117?style=flat&logo=swift&logoColor=F05138" alt="Swift" />
 </p>
 
@@ -51,12 +53,16 @@
   <img src="https://img.shields.io/badge/C%23-0d1117?style=flat&logo=csharp&logoColor=9B4F96" alt="C#" />
   <img src="https://img.shields.io/badge/Rust-0d1117?style=flat&logo=rust&logoColor=c9d1d9" alt="Rust" />
   <img src="https://img.shields.io/badge/Python-0d1117?style=flat&logo=python&logoColor=3776AB" alt="Python" />
+  <img src="https://img.shields.io/badge/PHP-0d1117?style=flat&logo=php&logoColor=777BB4" alt="PHP" />
   <img src="https://img.shields.io/badge/Tauri-0d1117?style=flat&logo=tauri&logoColor=FFC131" alt="Tauri" />
+  <img src="https://img.shields.io/badge/Electron-0d1117?style=flat&logo=electron&logoColor=47848F" alt="Electron" />
 </p>
 
 <p align="center"><sub><b>DATABASES</b></sub></p>
 <p align="center">
   <img src="https://img.shields.io/badge/PostgreSQL-0d1117?style=flat&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MSSQL-0d1117?style=flat&logo=microsoftsqlserver&logoColor=CC2927" alt="MSSQL" />
+  <img src="https://img.shields.io/badge/MongoDB-0d1117?style=flat&logo=mongodb&logoColor=47A248" alt="MongoDB" />
   <img src="https://img.shields.io/badge/Redis-0d1117?style=flat&logo=redis&logoColor=DC382D" alt="Redis" />
 </p>
 
@@ -66,7 +72,8 @@
   <img src="https://img.shields.io/badge/Git-0d1117?style=flat&logo=git&logoColor=F05032" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub_Actions-0d1117?style=flat&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
   <img src="https://img.shields.io/badge/Linux-0d1117?style=flat&logo=linux&logoColor=FCC624" alt="Linux" />
-  <img src="https://img.shields.io/badge/Figma-0d1117?style=flat&logo=figma&logoColor=F24E1E" alt="Figma" />
+  <img src="https://img.shields.io/badge/Neovim-0d1117?style=flat&logo=neovim&logoColor=57A143" alt="Neovim" />
+  <img src="https://img.shields.io/badge/Claude-0d1117?style=flat&logo=anthropic&logoColor=D97757" alt="Claude" />
 </p>
 
 <br>
@@ -144,10 +151,4 @@ Rust · TUI with ratatui.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/github-contribution-grid-snake-dark.svg" alt="contribution snake" />
-</p>
-
-<br>
-
-<p align="center">
-  <sub>— kubaul —</sub>
 </p>
