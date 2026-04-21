@@ -14,7 +14,11 @@
 
 <br>
 
-<h3 align="center">About</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+  &nbsp; About &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+</h3>
 
 <p align="center">
   <b>Jakub Uchman-Lach</b><br>
@@ -25,6 +29,8 @@
   <a href="https://github.com/kubaul"><img src="https://img.shields.io/badge/@kubaul-0d1117?style=flat&logo=github&logoColor=c9d1d9" alt="github" /></a>
   &nbsp;
   <a href="https://x.com/kubaul_"><img src="https://img.shields.io/badge/@kubaul__-0d1117?style=flat&logo=x&logoColor=c9d1d9" alt="x" /></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Warsaw,_Poland-0d1117?style=flat&logo=openstreetmap&logoColor=c9d1d9" alt="Warsaw, Poland" />
 </p>
 
 <br>
@@ -33,7 +39,11 @@
 
 <br>
 
-<h3 align="center">Stack</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+  &nbsp; Stack &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+</h3>
 
 <p align="center"><sub><b>FRONTEND</b></sub></p>
 <p align="center">
@@ -81,7 +91,11 @@
 
 <br>
 
-<h3 align="center">Featured</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+  &nbsp; Featured &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+</h3>
 
 <table align="center">
 <tr>
@@ -128,7 +142,11 @@ Rust · TUI with ratatui.
 
 <br>
 
-<h3 align="center">Stats</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+  &nbsp; Stats &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/divider.svg" height="10" alt="" />
+</h3>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/stats.svg" height="170" alt="stats" />
