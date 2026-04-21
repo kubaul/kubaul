@@ -20,6 +20,17 @@ jobs:
       - name: Prepare dist
         run: mkdir -p dist
 
+      - name: Verify METRICS_TOKEN
+        continue-on-error: true
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::warning::METRICS_TOKEN secret is not set. Stats/streak/activity SVGs will not be generated correctly until you add it."
+          else
+            echo "METRICS_TOKEN present (length: ${#TOKEN})"
+          fi
+
       # ---------- snake ----------
       - name: Snake
         continue-on-error: true
@@ -65,8 +76,8 @@ jobs:
         env:
           PAT_1: ${{ secrets.METRICS_TOKEN }}
         run: |
-          npm ci --omit=dev
-          npm install express --no-save
+          npm ci --omit=dev --ignore-scripts
+          npm install express --no-save --ignore-scripts
           cat > server.mjs <<'EOF'
           import express from "express";
           import stats from "./api/index.js";
@@ -110,7 +121,7 @@ jobs:
           if [ -f composer.json ]; then
             composer install --no-dev --no-interaction --quiet 2>/dev/null || composer install --no-dev --no-interaction
           fi
-          php -S localhost:8080 -t . >/dev/null 2>&1 &
+          php -S localhost:8080 -t src >/dev/null 2>&1 &
           for i in $(seq 1 20); do nc -z localhost 8080 && break; sleep 1; done
 
           STREAK="user=${USERNAME}&hide_border=true&background=00000000&stroke=8B949E&ring=C9D1D9&fire=C9D1D9&currStreakLabel=C9D1D9&sideLabels=8B949E&sideNums=C9D1D9&dates=8B949E&currStreakNum=C9D1D9"
@@ -124,7 +135,7 @@ jobs:
         with:
           repository: Ashutosh00710/github-readme-activity-graph
           path: _ag
-          ref: master
+          ref: main
 
       - name: Build and serve activity-graph
         continue-on-error: true
