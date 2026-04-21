@@ -91,7 +91,7 @@ jobs:
           for i in $(seq 1 40); do nc -z localhost 3001 && break; sleep 1; done
 
           STATS="username=${USERNAME}&show_icons=true&hide_border=true&bg_color=00000000&count_private=true&include_all_commits=true&icon_color=8B949E&title_color=C9D1D9&text_color=8B949E&ring_color=C9D1D9"
-          LANGS="username=${USERNAME}&layout=compact&hide_border=true&bg_color=00000000&langs_count=8&title_color=C9D1D9&text_color=8B949E&hide=html,css,scss"
+          LANGS="username=${USERNAME}&layout=compact&hide_border=true&bg_color=00000000&langs_count=8&title_color=C9D1D9&text_color=8B949E&hide=html,css,scss,makefile,shaderlab,c%2B%2B"
 
           curl -fsS "http://localhost:3001/api?${STATS}" -o ../dist/stats.svg
           curl -fsS "http://localhost:3001/api/top-langs?${LANGS}" -o ../dist/top-langs.svg
