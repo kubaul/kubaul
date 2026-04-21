@@ -14,7 +14,26 @@
 
 <br>
 
-<!-- visual stack — skill icons, no numbers -->
+<!-- karty statystyk self-hosted z output/ — dane z prywatnych orgów przez PAT -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/stats.svg" height="170" alt="stats" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/streak.svg" height="170" alt="streak" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/top-langs.svg" height="170" alt="top languages" />
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/kubaul/kubaul/output/activity.svg" height="170" alt="activity" />
+</p>
+
+<br>
+
+---
+
+<br>
+
+<!-- skill-icons — wizualny stack, niezależny od danych statystycznych -->
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,react,tailwind,bun,nodejs,rust,cs,dotnet,py,tauri&perline=10" alt="primary stack" />
 </p>

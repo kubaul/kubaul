@@ -10,11 +10,19 @@ on:
 permissions:
   contents: write
 
+env:
+  USERNAME: kubaul
+
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake animation
+      - name: Prepare dist
+        run: mkdir -p dist
+
+      # ---------- snake ----------
+      - name: Snake
+        continue-on-error: true
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -22,19 +30,125 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Generate 3D contribution graph
+      # ---------- 3D contrib ----------
+      - name: 3D contrib
+        continue-on-error: true
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
+          USERNAME: ${{ env.USERNAME }}
 
-      - name: Consolidate 3D output
+      - name: Move 3D output
+        continue-on-error: true
         run: |
           mkdir -p dist/profile-3d-contrib
           cp -r profile-3d-contrib/. dist/profile-3d-contrib/ 2>/dev/null || true
-          ls -la dist
 
-      - name: Deploy to output branch
+      # ---------- Node runtime ----------
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # ---------- github-readme-stats (self-hosted) ----------
+      - name: Checkout github-readme-stats
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: anuraghazra/github-readme-stats
+          path: _grs
+          ref: master
+
+      - name: Serve github-readme-stats and fetch cards
+        continue-on-error: true
+        working-directory: _grs
+        env:
+          PAT_1: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          npm ci --omit=dev
+          npm install express --no-save
+          cat > server.mjs <<'EOF'
+          import express from "express";
+          import stats from "./api/index.js";
+          import topLangs from "./api/top-langs.js";
+          const app = express();
+          app.get("/api", stats);
+          app.get("/api/top-langs", topLangs);
+          app.listen(3001, () => console.log("GRS ready on 3001"));
+          EOF
+          node server.mjs &
+          for i in $(seq 1 40); do nc -z localhost 3001 && break; sleep 1; done
+
+          STATS="username=${USERNAME}&show_icons=true&hide_border=true&bg_color=00000000&count_private=true&include_all_commits=true&icon_color=8B949E&title_color=C9D1D9&text_color=8B949E&ring_color=C9D1D9"
+          LANGS="username=${USERNAME}&layout=compact&hide_border=true&bg_color=00000000&langs_count=8&title_color=C9D1D9&text_color=8B949E&hide=html,css,scss"
+
+          curl -fsS "http://localhost:3001/api?${STATS}" -o ../dist/stats.svg
+          curl -fsS "http://localhost:3001/api/top-langs?${LANGS}" -o ../dist/top-langs.svg
+
+      # ---------- streak-stats (PHP server) ----------
+      - name: Checkout streak-stats
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: DenverCoder1/github-readme-streak-stats
+          path: _streak
+          ref: main
+
+      - name: Setup PHP
+        continue-on-error: true
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl,mbstring
+
+      - name: Serve streak-stats and fetch
+        continue-on-error: true
+        working-directory: _streak
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -f composer.json ]; then
+            composer install --no-dev --no-interaction --quiet 2>/dev/null || composer install --no-dev --no-interaction
+          fi
+          php -S localhost:8080 -t . >/dev/null 2>&1 &
+          for i in $(seq 1 20); do nc -z localhost 8080 && break; sleep 1; done
+
+          STREAK="user=${USERNAME}&hide_border=true&background=00000000&stroke=8B949E&ring=C9D1D9&fire=C9D1D9&currStreakLabel=C9D1D9&sideLabels=8B949E&sideNums=C9D1D9&dates=8B949E&currStreakNum=C9D1D9"
+
+          curl -fsS "http://localhost:8080/?${STREAK}" -o ../dist/streak.svg
+
+      # ---------- activity-graph ----------
+      - name: Checkout activity-graph
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: Ashutosh00710/github-readme-activity-graph
+          path: _ag
+          ref: master
+
+      - name: Build and serve activity-graph
+        continue-on-error: true
+        working-directory: _ag
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          npm ci
+          npm run build
+          node dist/main.js &
+          for i in $(seq 1 30); do nc -z localhost 5100 && break; sleep 1; done
+
+          AG="username=${USERNAME}&hide_border=true&bg_color=0d1117&color=c9d1d9&line=8b949e&point=c9d1d9&area=true&area_color=30363d&title_color=c9d1d9"
+
+          curl -fsS "http://localhost:5100/graph?${AG}" -o ../dist/activity.svg
+
+      # ---------- Summary ----------
+      - name: List dist contents
+        if: always()
+        run: ls -la dist/ 2>/dev/null || true
+
+      # ---------- Deploy to output branch ----------
+      - name: Deploy to output
+        if: always()
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
