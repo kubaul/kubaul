@@ -5,7 +5,7 @@
 
 <!-- animowany typing, JSON-bracket style: role + keyboard + humor -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1500&color=C9D1D9&center=true&vCenter=true&width=700&lines=%7B+role%3A+%22software+engineer%22+%7D;%7B+keyboard%3A+%22corne%22%2C+editor%3A+%22zed%22+%7D;%7B+projects_named_after_cats%3A+4+%7D;%7B+version_number_avg%3A+%22v2+%28always%29%22+%7D;%7B+side_projects%3A+%22%E2%88%9E%22%2C+finished%3A+3+%7D" alt="role / setup / humor" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1500&color=C9D1D9&center=true&vCenter=true&width=700&lines=%7B+role%3A+%22software+engineer%22+%7D;%7B+keyboard%3A+%22corne%22%2C+editor%3A+%22nvim%22+%7D;%7B+projects_named_after_cats%3A+4+%7D;%7B+version_number_avg%3A+%22v2+%28always%29%22+%7D;%7B+side_projects%3A+%22%E2%88%9E%22%2C+finished%3A+3+%7D" alt="role / setup / humor" />
 </p>
 
 <br>
